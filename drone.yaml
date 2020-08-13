@@ -6,7 +6,7 @@ steps:
   image: plugins/docker
   settings:
     dry_run: true
-    repo: tkvba/HarnessDrone
+    repo: sndjnky/tk
   when:
     event:
     - pull_request
@@ -20,7 +20,7 @@ steps:
       from_secret: u_docker
     repo: sndjnky/tk
     tag:
-    - latest
+    - canary_v1
     - ${DOCKER_TAG}
   when:
     event:
