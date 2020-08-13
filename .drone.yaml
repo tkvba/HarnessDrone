@@ -6,7 +6,7 @@ steps:
   image: plugins/docker
   settings:
     dry_run: true
-    repo: ldhertert/mvcapp
+    repo: tkvba/HarnessDrone
   when:
     event:
     - pull_request
@@ -15,10 +15,10 @@ steps:
 - name: push
   image: plugins/docker
   settings:
-    username: ldhertert
-    password: 
+    username: u_docker
+    password: p_docker
       from_secret: dockerhubpw
-    repo: ldhertert/mvcapp
+    repo: sndjnky/tk
     tag:
     - latest
     - ${DOCKER_TAG}
